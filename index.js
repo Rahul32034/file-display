@@ -1,8 +1,10 @@
 const path = require('path');
 const fs = require('fs');
 const express = require("express");
-const port = 9090;
+//const port = 9090 ;
+const dotenv = require("dotenv");
 const app = express();
+const port = process.env.PORT || 9090;
 app.use('/', express.static('/'));
 app.use('/images', express.static('images'));
 
