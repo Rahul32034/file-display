@@ -3,6 +3,7 @@ const fs = require('fs');
 const express = require("express");
 //const port = 9090 ;
 const dotenv = require("dotenv");
+dotenv.config();
 const app = express();
 const port = process.env.PORT || 9090;
 app.use('/', express.static('/'));
